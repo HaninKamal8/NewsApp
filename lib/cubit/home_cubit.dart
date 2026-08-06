@@ -67,7 +67,7 @@ class HomeCubit extends Cubit<HomeState> {
       emit(HomeFailure(
         e.response?.data['message'] ??
             e.message ??
-            "Something went wrong",
+            "Something went wrong. ",
       ));
     } catch (e) {
       emit(HomeFailure(e.toString()));
